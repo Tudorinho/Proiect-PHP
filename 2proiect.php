@@ -2,4 +2,7 @@
   include_once 'header.php';
 ?>
 
-<h1>Lotul echipelor la Cupa Mondiala</h1>
+<h1>Teams at the World Cup 2022</h1>
+<br>
+
+
