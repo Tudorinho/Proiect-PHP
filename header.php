@@ -35,6 +35,8 @@
             }
       ?>
 
+    <li><a href="2proiect.php">Pagina 2</a></li>
+
   </ul>
 </nav>
 
@@ -44,4 +46,3 @@
 
 
 
-</html>
