@@ -2,9 +2,9 @@
   include_once 'header.php';
 ?>
 
-<section class="signup-form">
+<section>
   <h2>Log In</h2>
-  <div class="signup-form2">
+  <div>
     <form action="includes/login-inc.php" method="post">
       <input type="text" name="uid" placeholder="Username/Email...">
       <input type="password" name="pwd" placeholder="Password...">
