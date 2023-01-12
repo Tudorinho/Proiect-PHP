@@ -22,7 +22,6 @@
   <ul>
     <li><a href="index.php">Home</a></li>
     <li><a href="https://www.fifa.com/fifaplus/en/tournaments/mens/worldcup/qatar2022">Site World Cup 2022</a></li>
-    <li><a href="https://www.fifa.com/">Site FIFA</a></li>
 
     <?php
             if (isset($_SESSION["useruid"])) {
@@ -36,6 +35,8 @@
 
     <li><a href="2proiect.php">Pagina 2</a></li>
     <li><a href="3proiect.php">Pagina 3</a></li>
+    <li><a href="formular11.php">Formular Mail 1</a></li>
+    <li><a href="formular21.php">Formular Mail 2</a></li>
 
   </ul>
 </nav>
