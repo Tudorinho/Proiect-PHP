@@ -23,7 +23,7 @@ if (isset($_GET["idteam"])) {
 }
 
 
-header("location: /proiectPHP/2proiect.php");
+header("location: 2proiect.php");
 exit;
 
 ?>

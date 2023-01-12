@@ -11,7 +11,7 @@
 <br>
 <div class="container my-5">
    <h2>List of World Cup 2022 Teams</h2>
-   <a class="btn btn-primary" href="/phptest/create.php" role="button">New Team</a>
+   <a class="btn btn-primary" href="create.php" role="button">New Team</a>
    <br>
    <table class="table">
     <thead>
@@ -54,8 +54,8 @@
          <td>$row[stage]</td>
          <td>$row[marketvalue]</td>
          <td>
-             <a class='btn btn-primary btn-sm' href='/phptest/edit.php?idteam=$row[idteam]'>Edit</a>
-             <a class='btn btn-danger btn-sm' href='/phptest/delete.php?idteam=$row[idteam]'>Delete</a>
+             <a class='btn btn-primary btn-sm' href='edit.php?idteam=$row[idteam]'>Edit</a>
+             <a class='btn btn-danger btn-sm' href='delete.php?idteam=$row[idteam]'>Delete</a>
          </td>
 
       </tr>

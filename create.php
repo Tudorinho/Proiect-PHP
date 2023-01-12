@@ -55,7 +55,7 @@ do {
 
   $successMessage = "Team added correctly";
 
-    header("location: /proiectPHP/2proiect.php");
+    header("location: 2proiect.php");
     exit;
 
 } while (false);
@@ -149,7 +149,7 @@ do {
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>
             <div class="col-sm-3 d-grid">
-              <a class="btn btn-outline-primary" href="/phptest/2proiect.php" role="button">Cancel</a>
+              <a class="btn btn-outline-primary" href="2proiect.php" role="button">Cancel</a>
             </div>
 
           </div>

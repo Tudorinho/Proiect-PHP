@@ -26,7 +26,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
 
      //GET Method -> Show the data of the team
      if( !isset($_GET["idteam"]) ) {
-        header("location: /proiectPHP/2proiect.php");
+        header("location: 2proiect.php");
         exit;
      }
 
@@ -38,7 +38,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
     $row = $result->fetch_assoc();
 
     if (!$row){
-        header("location: /proiectPHP/2proiect.php");
+        header("location: 2proiect.php");
         exit;
     }
 
@@ -77,7 +77,7 @@ else{
 
         $successMessage = "Client updated correctly";
 
-        header("location: /proiectPHP/2proiect.php");
+        header("location: 2proiect.php");
         exit;
 
     
@@ -174,7 +174,7 @@ else{
               <button type="submit" class="btn btn-primary">Submit</button>
             </div>
             <div class="col-sm-3 d-grid">
-              <a class="btn btn-outline-primary" href="/phptest/2proiect.php" role="button">Cancel</a>
+              <a class="btn btn-outline-primary" href="2proiect.php" role="button">Cancel</a>
             </div>
 
           </div>
