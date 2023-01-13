@@ -24,3 +24,10 @@ VALUES
 ('France', 3, 'Finalists', 1005),
 ('Croatia', 7, 'Third Place', 400);
 
+
+--Tabelul pentru statistici legate de pagina
+CREATE TABLE stats(
+  date DATE UNIQUE PRIMARY KEY NOT NULL,
+  page_views INT DEFAULT 1
+)
+

@@ -35,6 +35,8 @@
 
     <li><a href="2proiect.php">Pagina 2</a></li>
     <li><a href="3proiect.php">Pagina 3</a></li>
+    <li><a href="4proiect.php">Pagina 4</a></li>
+    <li><a href="5proiect.php">Pagina 5</a></li>
     <li><a href="formular11.php">Formular Mail 1</a></li>
     <li><a href="formular21.php">Formular Mail 2</a></li>
 
