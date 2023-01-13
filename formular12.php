@@ -1,5 +1,7 @@
 <?php
 
+
+// get the data from the form and save it as variable in PHP
 $name = $_POST['name'];
 $email = $_POST['email'];
 $subject = $_POST['subject'];

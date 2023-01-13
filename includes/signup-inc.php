@@ -10,7 +10,6 @@ if (isset($_POST["submit"])) {
   $pwdRepeat = $_POST["pwdrepeat"];
 
   // These functions can be found in functions.inc.php
-
   require_once "dbh-inc.php";
   require_once 'functions-inc.php';
 
@@ -20,21 +19,25 @@ if (isset($_POST["submit"])) {
     header("location: ../signup.php?error=emptyinput");
 		exit();
   }
+
 	// Proper username chosen
   if (invalidUid($uid) !== false) {
     header("location: ../signup.php?error=invaliduid");
 		exit();
   }
+
   // Proper email chosen
   if (invalidEmail($email) !== false) {
     header("location: ../signup.php?error=invalidemail");
 		exit();
   }
+
   // Do the two passwords match?
   if (pwdMatch($pwd, $pwdRepeat) !== false) {
     header("location: ../signup.php?error=passwordsdontmatch");
 		exit();
   }
+  
   // Is the username taken already
   if (uidExists($conn, $username) !== false) {
     header("location: ../signup.php?error=usernametaken");

@@ -15,6 +15,7 @@ function emptyInputSignup($name, $email, $username, $pwd, $pwdRepeat) {
 // Check invalid username
 function invalidUid($username) {
 	$result;
+	// preg_match function in this case checks if we have any other characters than letters(A-Z) or numbers (0-9)
 	if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
 		$result = true;
 	}
@@ -50,13 +51,20 @@ function pwdMatch($pwd, $pwdrepeat) {
 
 // Check if username is in database, if so then return data
 function uidExists($conn, $username) {
-  $sql = "SELECT * FROM users WHERE usersUid = ? OR usersEmail = ?;";
+    //we insert a question mark (?) where we want to substitute in an integer, string, double or blob value
+    $sql = "SELECT * FROM users WHERE usersUid = ? OR usersEmail = ?;";
 	$stmt = mysqli_stmt_init($conn);
+	// mysqli_stmt_prepare -> prepares a statement for execution (second parameter is the query)
+	// is boolean, so returns true or false
 	if (!mysqli_stmt_prepare($stmt, $sql)) {
+		// error message
 	 	header("location: ../signup.php?error=stmtfailed");
 		exit();
 	}
 
+	//  mysqli_stmt_bind_param() function is used to bind variables to the parameter markers of a prepared statement
+	// s is for string, so "ss"-> 2 strings
+	// stmt -> the object representing a prepared statement
 	mysqli_stmt_bind_param($stmt, "ss", $username, $username);
 	mysqli_stmt_execute($stmt);
 
@@ -84,12 +92,15 @@ function createUser($conn, $name, $email, $username, $pwd) {
 		exit();
 	}
 
+	//hash the password
 	$hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
+    // bind_param used to bing parameters, so "ssss" means 4 strings
 	mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $username, $hashedPwd);
 	mysqli_stmt_execute($stmt);
 	mysqli_stmt_close($stmt);
 	mysqli_close($conn);
+	// if the sign up is successful, we get "?error=none" at the end of the URL 
 	header("location: ../signup.php?error=none");
 	exit();
 }
@@ -115,6 +126,7 @@ function loginUser($conn, $username, $pwd) {
 		exit();
 	}
 
+	// get the real password, not the hashed one, and test if it matches
 	$pwdHashed = $uidExists["usersPwd"];
 	$checkPwd = password_verify($pwd, $pwdHashed);
 

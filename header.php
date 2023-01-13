@@ -23,15 +23,19 @@
     <li><a href="index.php">Home</a></li>
     <li><a href="https://www.fifa.com/fifaplus/en/tournaments/mens/worldcup/qatar2022">Site World Cup 2022</a></li>
 
+
     <?php
             if (isset($_SESSION["useruid"])) {
               echo "<li><a href='logout.php'>Logout</a></li>";
+              // if user is loged in, then only have Log Out as option
             }
             else {
               echo "<li><a href='signup.php'>Sign up</a></li>";
               echo "<li><a href='login.php'>Log in</a></li>";
+              // else, if he's not loged in, have Sign Up and Log In as options
             }
       ?>
+
 
     <li><a href="2proiect.php">Pagina 2</a></li>
     <li><a href="3proiect.php">Pagina 3</a></li>

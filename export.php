@@ -12,6 +12,8 @@ if(isset($_POST["export"]))
 
  if(mysqli_num_rows($result) > 0)
  {
+// We use output to insert the data from the table, so we can export it to Excel
+// First, create the layout
   $output .= '
    <table class="table" bordered="1">  
    <tr>  
@@ -24,6 +26,7 @@ if(isset($_POST["export"]))
 
   while($row = mysqli_fetch_array($result))
   {
+    // Second, if we have rows, paste the data from MySQL database in output
    $output .= '
     <tr>  
                          <td>'.$row["teamname"].'</td>  

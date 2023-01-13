@@ -15,6 +15,7 @@
     </form>
   </div>
 
+
   <?php
   // Error messages
     if (isset($_GET["error"])) {
@@ -41,6 +42,7 @@
       }
     }
   ?>
+
 
 </section>
 

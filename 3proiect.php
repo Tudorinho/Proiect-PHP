@@ -19,9 +19,9 @@ $dom = new DOMDocument();
 @ $dom->loadHTML($html);
 
 $divMwContentText = $dom->getElementById('content');
-
 $h3 = $divMwContentText->getElementsByTagName('h3');
-
+// Now we will try to get the first 10 'h3' elements of the 'content' tag
+// In this case, we will return the first 10 editions of the World Cup
 $i = 0;
 foreach ($h3 as $x) {
   $i++;
@@ -30,7 +30,9 @@ foreach ($h3 as $x) {
   }
   $text = $x->textContent;
   echo trim( $text, "[modificare | modificare sursă]");
+  // Normal pe wikipedia apare si cu modificare sursa, vrem sa ramana doar continutul legat de Campionatul Mondial
   echo "<br>";
+  // lasam spatiu intre editiile de Cupa Mondiala
 }
 
 

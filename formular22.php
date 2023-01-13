@@ -12,6 +12,7 @@ if (isset($_POST['submit'])) {
   $txt = "You have received an e-mail from " . $name . " . \n\n" . $message;
 
   mail($mailTo, $subject, $txt, $headers);
-  header("Location: formular.php?mailsend");
+  header("Location: formular.php?mailsend"); 
+  // if the e-mail is sent, add "?phpmailsend" to the end of the URL 
 
 }
