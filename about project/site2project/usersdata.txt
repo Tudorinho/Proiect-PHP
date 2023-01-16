@@ -1,0 +1,8 @@
+laura@iftimie ->user
+laura14
+
+alma@caine ->user
+alma
+
+dan@tudor ->admin
+dan15

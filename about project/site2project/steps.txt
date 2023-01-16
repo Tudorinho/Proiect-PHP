@@ -1,0 +1,4 @@
+1) session start, connect to the database, connection error message
+2) check if the user is logged in
+3) check if the user has submitted the login form, check if the user has submitted the signup form
+4) HTML, Login Form, Signup Form
